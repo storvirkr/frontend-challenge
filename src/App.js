@@ -15,6 +15,7 @@ function App() {
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
     setFavorites(storedFavorites);
+    setPage(1);
     loadCatImages();
   }, []);
 
