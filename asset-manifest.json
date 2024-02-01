@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/storvirkr/frontend-challenge/static/css/main.9119b8f3.css",
+    "main.js": "/storvirkr/frontend-challenge/static/js/main.238d900a.js",
+    "static/js/787.8baa694d.chunk.js": "/storvirkr/frontend-challenge/static/js/787.8baa694d.chunk.js",
+    "static/media/like.svg": "/storvirkr/frontend-challenge/static/media/like.c70cff9adf616c679add9a2f617c6f0a.svg",
+    "index.html": "/storvirkr/frontend-challenge/index.html",
+    "static/media/liked.svg": "/storvirkr/frontend-challenge/static/media/liked.f9bf2d01ae55ccb276cd78ed9e0b1b43.svg",
+    "main.9119b8f3.css.map": "/storvirkr/frontend-challenge/static/css/main.9119b8f3.css.map",
+    "main.238d900a.js.map": "/storvirkr/frontend-challenge/static/js/main.238d900a.js.map",
+    "787.8baa694d.chunk.js.map": "/storvirkr/frontend-challenge/static/js/787.8baa694d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9119b8f3.css",
+    "static/js/main.238d900a.js"
+  ]
+}
