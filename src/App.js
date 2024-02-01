@@ -149,8 +149,8 @@ function App() {
           </ul>
         )}
 
-      <div className="load-more-button">
-        <button onClick={loadMoreCats}>Load More Cats</button>
+      <div >
+        <button className="load-more-button" onClick={loadMoreCats}>Load More Cats</button>
       </div>
         {filteredCatImages.length === 0 && !isLoading && (
           <p style={{ textAlign: 'center', margin: '10px' }}>No cats found.</p>
