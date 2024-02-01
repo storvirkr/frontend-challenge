@@ -1,5 +1,5 @@
 # Задание для Front-end стажёра
-
+gh-pages: https://storvirkr.github.io/frontend-challenge/
 
 ## Проект "Кошачий пинтерест"
 
