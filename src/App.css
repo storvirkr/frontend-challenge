@@ -1,0 +1,154 @@
+/* src/App.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.tab-buttons {
+  display: flex;
+  background-color: rgba(33, 150, 243, 1);
+  margin-bottom: 20px;
+  height: 64px;
+}
+
+.tab-buttons button {
+  border: none;
+  background-color: rgba(33, 150, 243, 1);
+  margin-left: 40px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.tab-button-all:hover {
+  background-color: rgba(30, 136, 229, 1);
+}
+.tab-button-fav:hover {
+  background-color: rgba(30, 136, 229, 1);
+}
+
+.cat-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 20px;
+}
+
+.cat-item {
+  position: relative;
+}
+
+.cat-item img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.button-container button {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  display: grid; /* Use grid layout for favorites to match the style */
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 20px;
+}
+
+.favorite-item {
+  position: relative;
+}
+
+.favorite-item img {
+  width: 100%; /* Make favorite images the same width as regular images */
+  height: 225px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.favorite-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.favorite-overlay:hover {
+  opacity: 1;
+}
+
+.favorite-overlay button {
+  padding: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
+.favorite-overlay button:hover {
+  text-decoration: underline;
+}
+
+.liked-icon {
+  position: absolute;
+  bottom: 15px; /* Adjust the top position as needed */
+  right: 5px; /* Adjust the right position as needed */
+  max-width: 30px;
+  max-height: 30px;
+  opacity: 0;
+}
+
+.liked-icon:hover {
+  fill: rgba(255, 30,40, 40);
+}
+
+.like-icon{
+  position: absolute;
+  bottom: 15px; /* Adjust the top position as needed */
+  right: 5px; /* Adjust the right position as needed */
+  max-width: 25px;
+  max-height: 25px;
+  opacity: 0;
+}
+.cat-item:hover .like-icon{
+  opacity: 1; /* Show the heart icon when hovering over the cat item */
+}
+.cat-item:hover .liked-icon{
+  opacity: 1;
+}
+
+.cat-item:hover {
+  
+box-shadow: 0px 9px 5px -6px rgba(0,0,0,0.75);
+}
