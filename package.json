@@ -1,6 +1,6 @@
 {
   "name": "cat-viewer-app",
-  "homepage": "https://storvirkr.github.io/storvirkr/frontend-challenge",
+  "homepage": "https://storvirkr.github.io/frontend-challenge",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
