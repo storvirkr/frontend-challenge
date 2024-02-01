@@ -15,7 +15,6 @@ function App() {
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
     setFavorites(storedFavorites);
-    setPage(1);
     loadCatImages();
   }, []);
 
@@ -29,19 +28,24 @@ function App() {
         loadCatImages();
       }
     };
+    
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [catImages, isLoading]);
+  const loadMoreCats = () => {
+    loadCatImages();
+  };
 
   const loadCatImages = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(
-        `https://api.thecatapi.com/v1/images/search?limit=10&page=${page}&api_key=${apiKey}`
-      );
+      const apiUrl = `https://api.thecatapi.com/v1/images/search?limit=10&page=${page}&api_key=${apiKey}`;
+    console.log('API URL:', apiUrl);
+
+    const response = await fetch(apiUrl);
       const data = await response.json();
       const newCatImages = data.map((cat) => ({
         url: cat.url,
@@ -145,11 +149,13 @@ function App() {
           </ul>
         )}
 
+      <div className="load-more-button">
+        <button onClick={loadMoreCats}>Load More Cats</button>
+      </div>
         {filteredCatImages.length === 0 && !isLoading && (
           <p style={{ textAlign: 'center', margin: '10px' }}>No cats found.</p>
         )}
       </div>
-
       {isLoading && <p style={{ textAlign: 'center', margin: '10px' }}>... loading more cats ...</p>}
     </div>
   );
